@@ -62,7 +62,7 @@ function createCard(data, index) {
   </div>
   `;
 
-  card.addEventListener("click", ()=> card.classList.toggle("show-answer"));
+  card.addEventListener("click", () => card.classList.toggle("show-answer"));
 
   //add to DOM cards
   cardsEl.push(card);
@@ -73,7 +73,36 @@ function createCard(data, index) {
 
 //show number of cards
 function updateCurrentText() {
-    currentEl.innerText = `${currentActiveCard +1}/${cardsEl.length}`;
+  currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
 }
 
 createCards();
+
+//event listeners
+nextBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card left";
+
+  currentActiveCard++;
+
+  if (currentActiveCard > cardsEl.length - 1) {
+    currentActiveCard = cardsEl.length - 1;
+  }
+
+  cardsEl[currentActiveCard].className = "card active";
+
+  updateCurrentText();
+});
+
+prevBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card right";
+
+  currentActiveCard--;
+
+  if (currentActiveCard < 0) {
+    currentActiveCard = 0;
+  }
+
+  cardsEl[currentActiveCard].className = "card active";
+
+  updateCurrentText();
+});
