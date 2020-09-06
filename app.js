@@ -91,6 +91,8 @@ createCards();
 //event listeners
 //show add container
 showBtn.addEventListener("click", () => addContainerEl.classList.add("show"));
+//hide add container
+hideBtn.addEventListener("click", () => addContainerEl.classList.remove("show"));
 
 //next card button
 nextBtn.addEventListener("click", () => {
