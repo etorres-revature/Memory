@@ -1,0 +1,55 @@
+@import url("https://fonts.google.com/specimen/Lato?sidebar.open=true&selection.family=Lato:wght@700");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2 {
+  position: relative;
+}
+
+h1 button, 
+h2 button {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2.5px solid #aaa;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-top: 10px 15px;
+}
+
+.small-btn {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.ghost-btn {
+  border: 0;
+  background-color: transparent;
+}
+
+.clear-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
