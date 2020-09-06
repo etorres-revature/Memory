@@ -20,7 +20,6 @@ const cardsEl = [];
 //store card data
 const cardsData = getCardsData();
 
-
 // [
 //   {
 //     question: "what must a variable begin with?",
@@ -81,9 +80,9 @@ function updateCurrentText() {
 
 //get card information from local storage
 function getCardsData() {
-    const cards = JSON.parse(localStorage.getItem("cards"));
+  const cards = JSON.parse(localStorage.getItem("cards"));
 
-    return cards === null ? [] : cards;
+  return cards === null ? [] : cards;
 }
 
 createCards();
@@ -91,8 +90,39 @@ createCards();
 //event listeners
 //show add container
 showBtn.addEventListener("click", () => addContainerEl.classList.add("show"));
+
 //hide add container
-hideBtn.addEventListener("click", () => addContainerEl.classList.remove("show"));
+hideBtn.addEventListener("click", () =>
+  addContainerEl.classList.remove("show")
+);
+
+//add new card
+addCardBtn.addEventListener("click", () => {
+  event.preventDefault();
+  const question = questionEl.value;
+  const answer = answerEl.value;
+  // console.log(question, answer);
+
+  if (question.trim() && answer.trim()) {
+    const newCard = { question, answer };
+
+    createCard(newCard);
+
+    questionEl.value = "";
+    answerEl.value = "";
+
+    questionEl.placeholder = "Enter question for front of card here...";
+    answerEl.placeholder = "Enter answer for back of card here..";
+
+    addContainerEl.classList.remove("show");
+
+    cardsData.push(newCard);
+
+    setCardsData(cardsData);
+  } else {
+    alert("please enter a value for both question AND answer!");
+  }
+});
 
 //next card button
 nextBtn.addEventListener("click", () => {
