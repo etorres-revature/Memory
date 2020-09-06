@@ -18,20 +18,23 @@ let currentActiveCard = 0;
 const cardsEl = [];
 
 //store card data
-const cardsData = [
-  {
-    question: "what must a variable begin with?",
-    answer: "a letter, $, or _",
-  },
-  {
-    question: "what is a variable?",
-    answer: "conatiner for a piece of data",
-  },
-  {
-    question: "example of a case sensitive variable",
-    answer: "thisIsAVariable",
-  },
-];
+const cardsData = getCardsData();
+
+
+// [
+//   {
+//     question: "what must a variable begin with?",
+//     answer: "a letter, $, or _",
+//   },
+//   {
+//     question: "what is a variable?",
+//     answer: "conatiner for a piece of data",
+//   },
+//   {
+//     question: "example of a case sensitive variable",
+//     answer: "thisIsAVariable",
+//   },
+// ];
 
 //create DOM card for each element of data
 function createCards() {
@@ -76,9 +79,20 @@ function updateCurrentText() {
   currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
 }
 
+//get card information from local storage
+function getCardsData() {
+    const cards = JSON.parse(localStorage.getItem("cards"));
+
+    return cards === null ? [] : cards;
+}
+
 createCards();
 
 //event listeners
+//show add container
+showBtn.addEventListener("click", () => addContainerEl.classList.add("show"));
+
+//next card button
 nextBtn.addEventListener("click", () => {
   cardsEl[currentActiveCard].className = "card left";
 
@@ -93,6 +107,7 @@ nextBtn.addEventListener("click", () => {
   updateCurrentText();
 });
 
+//previous card button
 prevBtn.addEventListener("click", () => {
   cardsEl[currentActiveCard].className = "card right";
 
