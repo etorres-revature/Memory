@@ -160,3 +160,10 @@ prevBtn.addEventListener("click", () => {
 
   updateCurrentText();
 });
+
+//clear cards button
+clearBtn.addEventListener("click", ()=>{
+    localStorage.clear();
+    cardsContainerEl.innerHTML = "";
+    window.location.reload();
+})
