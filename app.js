@@ -166,4 +166,4 @@ clearBtn.addEventListener("click", ()=>{
     localStorage.clear();
     cardsContainerEl.innerHTML = "";
     window.location.reload();
-})
+});
