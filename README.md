@@ -1,6 +1,12 @@
 # [MEMORY](https://etorres-revature.github.io/Memory/)
 
- [MEMORY]https://etorres-revature.github.io/Memory/
+ [MEMORY](https://etorres-revature.github.io/Memory/) allows you to create flash cards of questions and answers. 
+
+ ![MEMORY home](./images/screenshots/memory-home.png)
+
+ When a user clicks the "+ Add New Card" button, the Add New Card screen is displayed:
+
+ ![MEMORY add new card](./images/screenshots/memory-add-card.png)
 
  Please enjoy the [MEMORY](https://etorres-revature.github.io/Memory/).  E-mail me with any feature update suggestions.
 
