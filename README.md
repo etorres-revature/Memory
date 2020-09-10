@@ -8,6 +8,20 @@
 
  ![MEMORY add new card](./images/screenshots/memory-add-card.png)
 
+ The "Question" entered will be displayed on the front of the card. 
+
+ ![MEMORY card front](./images/screenshots/memory-card-front.png)
+
+ By using the "Flip Over" button the user can access the "Answer" on the back of the card.
+
+ ![MEMORY card back](./images/screenshots/memory-card-back.png)
+
+ The user can add as many cards as needed.  The MEMORY app keeps track of the cards and uses local storage to persist them between page loads.  Left "<-" and Right "->" arrows allow the user to go through the stack of memory cards. 
+
+ The "Clear Cards" button will empty local storage and reset the card stack.
+
+ ![MEMORY cards cleared](./images/screenshots/memory-home.png)
+
  Please enjoy the [MEMORY](https://etorres-revature.github.io/Memory/).  E-mail me with any feature update suggestions.
 
 ### :computer: Technologies Used :computer:
