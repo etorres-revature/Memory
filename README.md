@@ -22,7 +22,7 @@
 
  ![MEMORY cards cleared](./images/screenshots/memory-home.png)
 
- Please enjoy the [MEMORY](https://etorres-revature.github.io/Memory/).  E-mail me with any feature update suggestions.
+ Please enjoy [MEMORY](https://etorres-revature.github.io/Memory/).  E-mail me with any feature update suggestions.
 
 ### :computer: Technologies Used :computer:
 
