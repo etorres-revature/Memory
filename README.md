@@ -16,7 +16,7 @@
 
  ![MEMORY card back](./images/screenshots/memory-card-back.png)
 
- The user can add as many cards as needed.  The MEMORY app keeps track of the cards and uses local storage to persist them between page loads.  "<-" **LEFT** and "->" **RIGHT** arrows allow the user to go through the stack of memory cards. 
+ The user can add as many cards as needed.  The MEMORY app keeps track of the cards and uses local storage to persist them between page loads.  "<-" **LEFT** and **RIGHT** "->" arrows allow the user to go through the stack of memory cards. 
 
  The **"Clear Cards"** button will empty local storage and reset the card stack.
 
